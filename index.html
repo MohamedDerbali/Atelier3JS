@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .left {
+            grid-area: main;
+        }
+        .input {
+            width: 60%;
+        }
+        .right {
+            grid-area: right;
+        }
+
+        .error{
+            grid-area: error;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                'main right right error'
+            ;
+        }
+    </style>
+</head>
+
+<body>
+    <br />
+    <br />
+    <hr />
+    <br />
+    <br />
+    <h1>Inscription</h1>
+    <form>
+        <div class="grid-container">
+            <div class="left"> 
+                <label>Nom *</label><br/><br/>
+                <label>Prénom</label><br/><br/>
+                <label>Address</label><br/><br/><br/>
+                <label>Numéro de Téléphone *</label><br/>
+                <label>Date de naissance</label><br/>
+                <label>Mot de passe</label><br/>
+                <label>Confirmation mot de passe</label><br/>
+            </div>
+            <div class="right">
+                <input type="text" placeholder="donner votre nom..." class="input" name="input" />
+                <br/>
+                <br/>
+                <input type="text" placeholder="donner votre prenom..." name="input"/>
+                <br /><br/>
+                <textarea name="input"></textarea> <br />
+                <input type="number" name="input"/> <br />
+                <br/>
+                <input type="date" name="input" />
+                <br /><br/>
+                <input type="text" name="input" placeholder="donner votre mot de passe..." />
+                <br /><br/>
+                <input type="text" name="input" placeholder="confirmer votre mot de passe..." />
+                <br /><br/>
+            </div>
+            <div class="error">
+                <span class="errorsInputs"></span>
+            </div>
+        </div>
+        <button type="submit" class="submit">Submit</button>
+        <button type="reset">Reset</button>
+</form>
+<script src="./validation.js"></script>
+</body>
+
+</html>
